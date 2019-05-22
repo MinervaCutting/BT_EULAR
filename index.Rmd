@@ -132,7 +132,7 @@ library(knitr)
 ***
 
 
-### **June 13th** {.tabset .tabset-fade .tabset-pills}
+### **June 14th** {.tabset .tabset-fade .tabset-pills}
 
 #### **Casa Gallega** {.tabset .tabset-fade }
 
