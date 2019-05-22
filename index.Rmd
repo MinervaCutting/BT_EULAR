@@ -30,174 +30,311 @@ library(knitr)
 ```
 
 
-## SUGGESTED RESTAURANTS{.tabset .tabset-fade .tabset-pills}
+## SUGGESTED RESTAURANTS 
 
-### **Wednesday the 12th**
-
-**La Malontina**
-
-We propose you "La Malontina" restaurant for the 12th dinner. 
-
-La Malontina is a restaurant focused on traditional spanish cuisine with a creative touch. Its decoration is simply but fine. It combines the red walls with a really soft light that creates a really good atmosphere.
-
-Its basic menu is about dishes to share. 7 different tasty dishes to discover a creative spanish cuisine. The menu also includes drink package but not coffee.
-
-&nbsp;
-
-<img src = "https://cdn.restaurantes.com/static/img/restaurants/288/28852/28852_1176.gl.jpg" width="720">
-
-### **Thursday the 13th**
-
-**Los Galayos**
-
-The Restaurant Los Galayos is located in *La Plaza Mayor* in the *Austrias Neighbourhood*. Los Galayos has seen pass away the time; if the walls speak they would explain how was Madrid more than one hundred years ago, in the ages when La Puerta del Sol and La Plaza Mayor were the centre of gatherings and kingdom´s special Ceremonies. Los galayos has different dinning rooms, every dinning room has it own special environment and they have been decorated to offer all possible new sensations for visitors to taste a great typical traditional Spanish cuisine.
-
-The Spanish cuisine that they offer now is more elaborated, due to the interest of the proprietors in the investigation of the new current kitchen offering a wide variety inside its menu.
-
-Its basic menu includes 3 starters to share, a main dish to choose, a dessert and coffee. Drink package is included (wine and water)
-
-&nbsp;
-
-<img src = "https://www.losgalayos.net/media/6788/terraza-losgalayos-17_Grande.jpg" width="720">
-
-&nbsp;
-
-<img src = "http://blog.losgalayos.net/wp-content/uploads/2013/12/Salon-Duque2.jpg?w=640" width="720">
-
-### **Friday the 14th**
-
-**O Pulpo**
-
-O Pulpo is a donwtown's restaurant. 
-
-This restaurant has an amazing spanish atmosphere. The decoration is about warm colors with tipical spanish trimmings. 
-O Pulpo offers a Galician cuisine and all their products are a first quality, choosen daily by the owner.
-
-Its basic menu includes 4 starters to share, a main dish to choose and a dessert to choose. Drink package is included.
-
-&nbsp;
-
-<img src = "https://cdn.restaurantes.com/static/img/restaurants/805/8053/8053_89.gl.jpg" width="720">
-
-&nbsp;
-
-<img src = "https://cdn.restaurantes.com/static/img/restaurants/805/8053/8053_7916.gl.jpg" width="720">
-
-### **Saturday the 15th**
-
-**Ana La Santa**
-
-Ana La Santa is located at Plaza Santa Ana, at Madrid's downtown. Is about an idilic restaurant specialized in Mediterranean and spanish cuisine. 
-
-The gastronomic proposal of the restaurant is based on the preparation of excellent Spanish and Mediterranean recipes, made with the best ingredients from the best local markets.
-
-The basic menu includes 4 starters to share, a main dish to choose and a dessert to choose. Drink package included (also coffee)
-
-<img src = "https://cdn.restaurantes.com/static/img/restaurants/941/94101/94101_6242.gl.jpg" width="720">
-
-&nbsp;
-
-<img src = "http://www.buscorestaurantes.com/files/images/Ana-La-Santa-130085.jpg" width="720">
+<iframe src="https://www.google.com/maps/d/embed?mid=1x7yK8C5Ox8uDjR_OjfeDHEztWY70-Z0v&hl=en" width="800" height="500"></iframe>
 
 
-## PROGRAMME
+### **June 12th** {.tabset .tabset-fade }
 
-### **Programme Overview and timeline**
+**La Mucca de Padro**
 
-```{r echo=FALSE, message=FALSE,warning=FALSE}
-library(timevis)
-library(dplyr)
-library(readxl)
+#### Menu 0
 
-timeline <- read_excel("timeline.xlsx", sheet = "Sheet1", 
-    col_types = c("date", 
-        "text", "text", "numeric", "text", 
-        "text"))
+    **All to share**
+    Ham croquettes
+    Chicken wings
+    Tuna Mille-Feuille
+    Nachos de la teki
+    Sauteed Prawns
+    Boletus Pizza
+    Thai Curry chicken
+    ***
+    Dessert Tasting
+    ***
+    1 bottle of wine each 3 pax or 1 beer or 1 soft-drinks per person
+    ***
+    Coffee or tea
+    
+    Rates per person: 42,50€ VAT inc
 
-data <- data.frame( id = 1:length(timeline$start),
-                    start = as.POSIXlt(timeline$start),
-                    content = timeline$content,
-                    group = timeline$group,
-                    type = "box",
-                    style = "background-color:#FF9933;")
+***
 
-groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+#### Menu 1
 
-tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+    **All to share**
 
-tl %>% setOptions(list(orientation = "top", align = "left"))
+    Cheese and Cold Cuts
+    Mediterranean Salad
+    Padron Peppers
+    Steamed Mussels
+    Salmon Poke
+    Lamb Cous Cous
+    Perica Ibérica Pizza
+    ***
+    Dessert Tasting
+    ***
+    1 bottle of wine each 3 pax or 1 beer or 1 soft-drinks per person
+    ***
+    Coffee or tea
+    
+    Rates per person: 47,50€ VAT inc
 
-```
+***
 
-### **MAP**
+#### Menu 2
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+    **All to share**
 
-library(leaflet)
-library(stringr)
-library(ggmap)
-library(readxl)
-library(dplyr)
-library(leaflet.extras)
-library(shiny)
+    Cheese and Cold Cuts
+    Fresh Burrata
+    Mexican Quesadillas
+    Grilled Vegetables
+    Red Tuna Tartar
+    Green Curry
+    Rib-Eye steak 450 gr
+    ***
+    Dessert Tasting
+    ***
+    1 bottle of wine each 3 pax or 1 beer or 1 soft-drinks per person
+    ***
+    Coffee or tea
+    
+    Rates per person: 50€ VAT inc
 
-coordinates <- read_excel("timeline.xlsx", 
-    sheet = "Sheet3", col_types = c("text", 
-        "text", "numeric", "numeric", "text", 
-        "text"))
+***
 
-coordinates$Category <- factor(coordinates$Category)
+#### Menu 3
 
-m <- coordinates %>% 
-  leaflet(options = leafletOptions(dragging = TRUE,
-  minZoom = 14, maxZoom = 18)) %>% 
-  addProviderTiles("Esri") %>% 
-  setView(lng = 2.1687300, lat = 41.3863900, zoom = 14) 
+    *Starters to share*
 
-pal <- colorFactor(palette = c("red","blue"),
-      levels = coordinates$Category)
+    Iberian Ham
+    Mezze ( hummus, tabouleh, babaganoush)
+    Quinoa Salad
+    Sea Bass and Octopus ceviche
+    Oxtail Rissoto
+    ***
+    
+    *Main course (to choose in advance)*
+    
+    Red Tuna tataki 
+    or
+    Grilled filet mignon with cabrales cheese
+    ***
+    Dessert Tasting
+    ***
+    1 bottle of wine each 3 pax or 1 beer or 1 soft-drinks per person
+    ***
+    Coffee or tea
+    
+    Rates per person: 62,50€ VAT inc
 
-m %>% clearBounds() %>% 
-  addCircleMarkers(radius = 5, color = ~pal(Category)) %>% 
-  addPopups(popup = paste0("<b>",coordinates$Location,"</b>")) %>% 
-  addLegend(position = "bottomright", pal = pal, 
-  values = coordinates$Category) %>% addResetMapButton()
-
-```
-
-
-*****
-## BUDGET
-
-```{r echo=FALSE, message=FALSE,warning=FALSE}
-
-library(readxl)
-library(dplyr)
-library(knitr)
-library(kableExtra)
-library(DT)
-
-budget <- read_excel("timeline.xlsx", sheet = "Sheet2", 
-    col_types = c("date", "text", "text", 
-        "numeric", "text", "numeric", "numeric"))
-budget$DATE <- as.Date(budget$DATE)
-
-DT::datatable(budget, extensions = "Buttons",rownames = FALSE, options = list(paging= FALSE,
-initComplete = JS("
-    function(settings, json) {
-      $(this.api().table().header()).css({
-        'background-color': '#ee7600 ',
-        'color': '#fff'
-      });
-    }"),
-dom ='Bfrtip', buttons = c('copy','print'),                           pageLength = nrow(budget),autoWidth = TRUE)) %>% 
-   formatDate('DATE') %>% 
-  formatCurrency(6:7,'\U20AC')
+***
 
 
-```
+### **June 13th** {.tabset .tabset-fade .tabset-pills}
 
-### Terms & Conditions
+#### **Casa Gallega** {.tabset .tabset-fade }
+
+##### Menu 1
+
+    Squid with crispy vegetables
+    Homemade pasty
+    Mussels with marinara sauce
+    -------------------------------------
+    To choose one dish:
+    Hake in the oven with potatoes 
+    Grilled sole with wok vegetables
+    Grilled galician veal chop with potatoes
+    Grilled sirloin potatoes
+    ------------------------------
+    Homemade dessert
+    Coffe
+    -------------------------------
+    Wines: Albariño y Rioja crz. (1 botlle each 3 pax)
+    Mineral water
+
+    Rates per person 62,50€ VAT inc
+
+***
+
+##### Menu 2
+
+    Galician style octopus
+    Codfish fritters with pepper jam
+    Grilled small scallops
+    --------------------------------
+    To choose one dish:
+    Galician style hake with steam potatoes
+    Grilled sea-pike with vegetables
+    Grilled veal chop with potatoes
+    Galician beef tenderloin with potatoes
+    -------------------------------
+    Homemade dessert
+    Coffe
+    -------------------------------
+    Wines: Albariño y Rioja crz.(1 bottle each 3 pax)
+    Mineral water
+
+    Rates per person 69€ VAT inc
+
+
+***
+
+#### **Los Galayos** {.tabset .tabset-fade }
+
+##### Menu 1
+
+    Bread, olives and butter.
+    
+    *Starters to share*
+
+    Manchego Cheese with Breadsticks
+    Spanish Omelette
+    Breaded Fried Green Asparagus with Ali Oli sauce on the side
+
+    *Main dish*
+
+    Veal Scalops with Mushroom sauce
+    Side of potatoes at the oven and “padrón” green peppers
+
+    Dessert:
+
+    Light Pastry Filled with Cream and Hot Chocolate on Top
+
+    Natural Coffee or Infusion
+
+    Drinks:
+    Red Wine: Valdepeñas
+    White Wine: Valdepeñas
+    Mineral Water
+    
+    Rates: 46€ VAT inc per pax
+    
+***
+
+##### Menu 2
+
+    Bread, olives and butter.
+    
+    *Starters to share*
+
+    Mixed Salad with Tuna
+    Homemade sausage
+    Fried Baby Squids with Eggs and Peppers stripes
+
+    *Main dish*
+
+    Chicken and Vegetables Paella
+
+    Dessert:
+
+    Traditional Puff Pastry with two kinds of cream
+    And Forest Fruits sauce
+
+    Natural Coffee or Infusion
+
+    Drinks:
+    Red Wine: Valdepeñas
+    White Wine: Valdepeñas
+    Mineral Water
+    
+    Rates: 47,50€ VAT inc per pax
+    
+***
+
+##### Menu 3
+
+    Bread, olives and butter.
+    
+    *Starters to share*
+
+    Potatoes Salad with Breadsticks
+    Chunks of Fried Iberic Pig
+    Puding of Codfish with Olive Oil ,Garlic and toasted bread
+    Mixed Croquettes: Two Kind of Cheese and Iberic Ham
+
+    *Main dish*
+
+    Beef Steak with garnished
+
+    Dessert:
+
+    “Black Forest” Chocolate and Cream cake with white chocolate sauce
+
+    Natural Coffee or Infusion
+
+    Drinks:
+    Red Wine: Valdepeñas
+    White Wine: Valdepeñas
+    Mineral Water
+    
+    Rates: 55€ VAT inc per pax
+    
+***
+
+
+### **June 15th** {.tabset .tabset-fade }
+
+**Posada de la Villa**
+
+#### Tasting Menu
+
+
+    APPETIZER: 
+    - Bellota Ham 
+    - Roasted Peppers Salad with Tuna  
+    - Andalusian Fried Squid
+    - Scrambled Eggs with Shrimps, Mushrooms and Asparagus  
+    - Homemade Croquettes
+    - Red Sausage from Navarra                                                        
+    - Posadero´s Onions
+    - “Burgos” Black pudding
+    
+    ROAST LAMB (in quarters in traditional oven)
+    LETTUCE AND ONION SALAD
+
+    POSADERO'S DESSERT
+    (Bartolillo (cream pie), Fried Milk, Pastry)
+
+    WINE: DEHESA DE VALQUEJIGOSO   
+    MINERAL WATER
+    COFFEE OR TEA
+
+    Rates: 78,20€ VAT inc
+
+#### Menu 1
+
+    *Starters to share*
+    Bellota Ham
+    "Manchego" cheese
+    Roast Red Pepper "Piquillo"
+    Red Sausage from Navarra
+    
+    ROAST LAMB (in quarters in traditional oven)
+    LETTUCE AND ONION SALAD
+    
+    POSADERO'S DESSERT
+    (Bartolillo (cream pie), Fried Milk, Pastry)
+    
+    MINERAL WATER
+    COFFEE OR TEA
+
+    Rates: 83,50€ VAT inc
+
+***
+
+### **Transfers rates**
+
+    *35 seaters bus from the Airport to the hotel: 172€ VAT inc
+    *English speaking assistant (transfer airport/ hotel): 155€ VAT inc
+    *35 seaters bus from the hotel to the fair ot from the fair to the restaurant for dinner
+    (one way): 172 VAT inc
+
+
+***
+
+### **Terms & Conditions**
 
   *Rates valid for 2019.
   
@@ -205,7 +342,7 @@ dom ='Bfrtip', buttons = c('copy','print'),                           pageLength
   
   *VAT included. 
   
-  *No reservation has been done. Availability upon request.
+  *All the restaurants are blocked in the dates writen above, to confirm the booking it will be necessary to pay a deposit to each restaurant
   
 *****
 
